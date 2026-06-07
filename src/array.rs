@@ -1,5 +1,5 @@
 pub struct Array<T> {
-    shape: Vec<usize>,
+    shape: Vec<Vec<T>>,
     data: Vec<T>,
 }
 
@@ -25,19 +25,15 @@ impl<T> Array<T> {
         self.shape.clone()
     }
 
-    pub fn len(&self) -> usize {
+    pub fn size(&self) -> usize {
         self.data.len()
     }
 
     pub fn ndim(&self) -> usize {
-        todo!("Not implemented")
+        self.shape.len()
     }
 
-    pub fn size(&self) -> usize {
-        todo!("Not implemented")
-    }
-
-    pub fn reshape(&self) -> usize {
-        todo!("Not implemented")
+    pub fn reshape(&self, shape: Vec<usize> , order: char) -> Vec<usize> {
+        todo!("Not Implemented!")
     }
 }
